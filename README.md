@@ -3,6 +3,7 @@
 
 Naseeb S, Visinoni F, Hu Y, Hinks Roberts AJ, Maslowska A, Walsh T, Smart KA, Louis EJ, Delneri D. Restoring fertility in yeast hybrids: Breeding and quantitative genetics of beneficial traits. Proc Natl Acad Sci U S A. 2021 Sep 21;118(38):e2101242118. doi: 10.1073/pnas.2101242118. PMID: 34518218; PMCID: PMC8463882.
 
+The MultipoolQTLanalysis directory contains various wrapper scripts from Yue Hu that are required to run the analysis (as well as Multipool itself). Navigate into the 'MultipoolQTLanalysis' directory.
 
 1. Mapping and variant calling with freebayes
 A bash script was run over each set of fastq files (R1 and R2). The samples were processed individually such that there is one resultant VCF file per sample. For ech VCF file the following columns were extracted and saved as csv files: Chrom, Pos, Ref, Alt, AO and RO (NB it is important the columns are in this order). If the sample was a founder (only one species) and mapped against a hybrid genome, remove irrelevent genome positions.
