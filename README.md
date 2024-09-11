@@ -5,11 +5,13 @@ Naseeb S, Visinoni F, Hu Y, Hinks Roberts AJ, Maslowska A, Walsh T, Smart KA, Lo
 The 'MultipoolQTLanalysis' directory contains various wrapper scripts from Yue Hu that are required to run the analysis (as well as Multipool itself). Navigate into the 'MultipoolQTLanalysis' directory.
 
 
-1. Mapping and variant calling with freebayes
+## 1. Mapping and variant calling with freebayes
+
 A bash script was run over each set of fastq files (R1 and R2). The samples were processed individually such that there is one resultant VCF file per sample. For ech VCF file the following columns were extracted and saved as csv files: Chrom, Pos, Ref, Alt, AO and RO (NB it is important the columns are in this order). If the sample was a founder (only one species) and mapped against a hybrid genome, remove irrelevent genome positions.
 
 
-2. Process alleles in R using R scripts
+## 2. Process alleles in R using R scripts
+
 The parental allele frequencies for bi-allelic SNVs were obtained for each of the segregant pools
 
 Change the directory to 'Example_LowTemp'
@@ -22,18 +24,21 @@ setwd('Example_LowTemp')
 The scripts require making the following sub directories:
 
 Example_LowTemp/Input/Founder (Put the four founder csv files in here)
-Example_LowTemp/Input/Pool    (Put the two pool csv files in here)
 
+Example_LowTemp/Input/Pool    (Put the two pool csv files in here)
 
 make empty directories to store results:
 
 Example_LowTemp/Output_Scer/SN1_S68      (This will contain the output for s_cer alleles high fitness pool)
+
 Example_LowTemp/Output_Scer/SN2_S69      (This will contain the output for s_cer alleles low fitness pool)
 
 Example_LowTemp/Output_Skud/SN1_S68      (This will contain the output for s_kud alleles high fitness pool)
+
 Example_LowTemp/Output_Skud/SN2_S69      (This will contain the output for s_kud alleles high fitness pool)
 
-3. Run MULTIPOOL Analysis
+## 3. Run MULTIPOOL Analysis
+
 This requires python 2.7 environment 
 
 The MultipoolQTLanalysis directory contains the scripts required to run the analysis (as well as MULTIPOOL itself).
