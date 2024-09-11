@@ -1,8 +1,5 @@
-## R script to process Skud alleles from VCF files containing freebayes RO and AO
+# R script to process Skud alleles from csv files containing freebayes RO and AO
 
-## Feb 2022
-## R code from Yue Hue
-################################################################################
 
 #founder scer
 Scer <- read.csv("Input/founder/HS15_S66.csv", stringsAsFactors=FALSE,row.names =    ## This should be the alternate founder ie HS15 (HS14 is the ref)

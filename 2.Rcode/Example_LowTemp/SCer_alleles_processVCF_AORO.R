@@ -1,8 +1,4 @@
-## R script to process Scer alleles from VCF files containing freebayes RO and AO
-
-## Feb 2022
-## R code from Yue Hue:
-############################################################################################
+# R script to process Scer alleles from csv files containing freebayes RO and AO
 
 
 #figure settings
