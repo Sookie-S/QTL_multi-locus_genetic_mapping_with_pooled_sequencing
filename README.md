@@ -12,8 +12,9 @@ A bash script was run over each set of fastq files (R1 and R2). The samples were
 2. Process alleles in R using R scripts
 The parental allele frequencies for bi-allelic SNVs were obtained for each of the segregant pools
 
-
+--
 setwd('Example_LowTemp')
+--
 
 The scripts require making the following sub directories:
 
@@ -35,23 +36,35 @@ This requires python 2.7 environment
 The MultipoolQTLanalysis directory contains the scripts required to run the analysis (as well as MULTIPOOL itself).
 To run, navigate into the 'MultipoolQTLanalysis' directory. 
 
+Bash command lines:
+
+--
 mkdir /LowTemp
 cd LowTemp
 
 mkdir MPresults_scer
 mkdir MPresults_skud
+--
 
 You will also need to copy the multipool input files, that were made using the R scripts earlier (the R output), into this directory
 
+Bash command lines:
+
+--
 cp -r Example_LowTemp/Output_Scer/ . 
 cp -r Example_LowTemp/Output_Skud/ .
+--
 
-From inside the 'LowTemp' directory, proceed to run the analysis for each condition on Linux command line as follows:
+From inside the 'LowTemp' directory, proceed to run the analysis for each condition on Bash command line as follows:
 
+Bash command lines:
+
+--
 for num in chrI    chrII   chrIII  chrIV   chrV    chrVI   chrVII  chrVIII chrIX   chrX    chrXI   chrXII  chrXIII chrXIV  chrXV  chrXVI; do .././mp_inference.py -n 150  Output_scer/SN1_S68/$num.txt Output_scer/SN2_S69/$num.txt -c 3300 -r 100 -m contrast -o MPresults_scer/scerLT$num.out --plotFile MPresults_scer/scerLT_$num |& tee MPresults_scer/scerLT_$num.log; done
 
 for num in Skud_10  Skud_12  Skud_14  Skud_16  Skud_2  Skud_4  Skud_6  Skud_8 Skud_11  Skud_13  Skud_15  Skud_1   Skud_3  Skud_5  Skud_7  Skud_9; do
 .././mp_inference.py -n 150  Output_skud/SN1_S68/$num.txt Output_skud/SN2_S69/$num.txt -c 3300 -r 100 -m contrast -o MPresults_skud/skudLT$num.out --plotFile MPresults_skud/skudLT_$num |& tee MPresults_skud/skudLT_$num.log
 done
+--
 
 
