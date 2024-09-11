@@ -12,6 +12,9 @@ A bash script was run over each set of fastq files (R1 and R2). The samples were
 2. Process alleles in R using R scripts
 The parental allele frequencies for bi-allelic SNVs were obtained for each of the segregant pools
 
+Change the directory to 'Example_LowTemp'
+
+R command
 --
 setwd('Example_LowTemp')
 --
