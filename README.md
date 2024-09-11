@@ -13,10 +13,8 @@ A bash script was run over each set of fastq files (R1 and R2). The samples were
 The parental allele frequencies for bi-allelic SNVs were obtained for each of the segregant pools
 
 Change the directory to 'Example_LowTemp'
-R command
---
+R command:
 setwd('Example_LowTemp')
---
 
 The scripts require making the following sub directories:
 
